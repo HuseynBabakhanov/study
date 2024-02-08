@@ -1,11 +1,19 @@
-body {
-  margin: 0;
+* {
+  box-sizing: border-box;
 }
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 h1 {
   margin: 0 0 17px 0;
+  display: flex;
+  flex-direction: column;
 }
+
 h2 {
-  margin: 0 0 19px 0;
+  margin: 60px 0 19px 0;
 }
 h1,
 h2 {
@@ -19,6 +27,11 @@ p {
   font-size: 18px;
   line-height: 24px;
 }
+
+header {
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 60px;
+}
 header a {
   font-weight: 400;
   font-size: 16px;
@@ -28,23 +41,32 @@ header a {
 }
 nav {
   padding: 33px 50px;
-  border-bottom: 1px solid #f0f0f0;
   margin-bottom: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  gap: 34px;
 }
 footer {
   background: #050038;
   padding: 47px 40px;
-  height: 100vh;
 }
 footer a {
   color: white;
   text-decoration: none;
 }
+
+.heroForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .heroForm + p {
   font-weight: 400;
   font-size: 14px;
@@ -52,20 +74,40 @@ footer a {
   color: #050038;
   margin: 8px 0 52px 0;
 }
+
+.heroLogos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 .heroText {
   color: #050038;
   margin: 0 0 55px 0;
 }
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  margin-bottom: 140px;
+}
 .sectionText {
   color: #696688;
   margin: 0 0 40px 0;
+}
+
+#hero {
+  display: flex;
+  gap: 65px;
 }
 #heroButton {
   background-color: #4262ff;
   color: #ffffff;
 }
 #heroButton:hover {
+  transition: background-color 1s 1s, border-radius 2s 1s;
   background-color: #122db6;
+  border-radius: 50%;
 }
 #heroButton:active {
   background-color: #071766;
@@ -73,7 +115,7 @@ footer a {
 .heroForm input {
   border-radius: 32px;
   border: 1px solid #9b99af;
-  height: 38px;
+  height: 48px;
   padding: 5px 10px;
 }
 .heroForm button {
@@ -85,6 +127,11 @@ footer a {
 .heroForm input:focus {
   background-color: aliceblue;
 }
+
+.section {
+  display: flex;
+  gap: 100px;
+}
 .link {
   color: #4262ff;
   text-decoration: underline;
@@ -92,19 +139,28 @@ footer a {
 .link:hover {
   color: #122db6;
 }
+
+.section-reverse {
+  flex-direction: row-reverse;
+  gap: 95px;
+}
 .sectionList {
   list-style: none;
-  /* list-style: url('../images/check.svg'); */
 }
 .sectionList li::marker {
   content: url("../images/check.svg");
 }
 
-ul > li {
-  font-size: 2rem;
-  margin-bottom: 1em;
+footer {
+  background: #050038;
+  color: white;
+  padding: 47px 40px;
 }
 
-html {
-  font-size: 10px;
+footer > div {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  padding: 0 40px;
 }
